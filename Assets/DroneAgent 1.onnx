@@ -1,0 +1,979 @@
+
+pytorch	2.9.0+cpu:õ†
+ˇ
+obs_0
+1network_body.processors.0.normalizer.running_meansubnode_sub"SubJ—
+	namespace√: mlagents.trainers.torch_entities.networks.SimpleActor/network_body: mlagents.trainers.torch_entities.networks.NetworkBody/network_body.observation_encoder: mlagents.trainers.torch_entities.networks.ObservationEncoder/network_body.observation_encoder.processors.0: mlagents.trainers.torch_entities.encoders.VectorInput/network_body.observation_encoder.processors.0.normalizer: mlagents.trainers.torch_entities.encoders.Normalizer/sub: aten.sub.TensorJŸ
+pkg.torch.onnx.class_hierarchy∂['mlagents.trainers.torch_entities.networks.SimpleActor', 'mlagents.trainers.torch_entities.networks.NetworkBody', 'mlagents.trainers.torch_entities.networks.ObservationEncoder', 'mlagents.trainers.torch_entities.encoders.VectorInput', 'mlagents.trainers.torch_entities.encoders.Normalizer', 'aten.sub.Tensor']J∏
+pkg.torch.onnx.fx_nodeù%sub : [num_users=1] = call_function[target=torch.ops.aten.sub.Tensor](args = (%inputs_0, %b_network_body_processors_0_normalizer_running_mean), kwargs = {})JÀ
+pkg.torch.onnx.name_scopes¨['', 'network_body', 'network_body.observation_encoder', 'network_body.observation_encoder.processors.0', 'network_body.observation_encoder.processors.0.normalizer', 'sub']Jı
+pkg.torch.onnx.stack_trace÷File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\networks.py", line 682, in forward
+    encoding, memories_out = self.network_body(
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\networks.py", line 237, in forward
+    encoded_self = self.observation_encoder(inputs)
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\networks.py", line 110, in forward
+    processed_obs = processor(obs_input)
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\encoders.py", line 100, in forward
+    inputs = self.normalizer(inputs)
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\encoders.py", line 16, in forward
+    (inputs - self.running_mean)
+•
+sub
+sqrtdiv_1
+node_div_1"DivJ”
+	namespace≈: mlagents.trainers.torch_entities.networks.SimpleActor/network_body: mlagents.trainers.torch_entities.networks.NetworkBody/network_body.observation_encoder: mlagents.trainers.torch_entities.networks.ObservationEncoder/network_body.observation_encoder.processors.0: mlagents.trainers.torch_entities.encoders.VectorInput/network_body.observation_encoder.processors.0.normalizer: mlagents.trainers.torch_entities.encoders.Normalizer/div_1: aten.div.TensorJŸ
+pkg.torch.onnx.class_hierarchy∂['mlagents.trainers.torch_entities.networks.SimpleActor', 'mlagents.trainers.torch_entities.networks.NetworkBody', 'mlagents.trainers.torch_entities.networks.ObservationEncoder', 'mlagents.trainers.torch_entities.encoders.VectorInput', 'mlagents.trainers.torch_entities.encoders.Normalizer', 'aten.div.Tensor']JÖ
+pkg.torch.onnx.fx_nodek%div_1 : [num_users=1] = call_function[target=torch.ops.aten.div.Tensor](args = (%sub, %sqrt), kwargs = {})JÕ
+pkg.torch.onnx.name_scopesÆ['', 'network_body', 'network_body.observation_encoder', 'network_body.observation_encoder.processors.0', 'network_body.observation_encoder.processors.0.normalizer', 'div_1']Jı
+pkg.torch.onnx.stack_trace÷File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\networks.py", line 682, in forward
+    encoding, memories_out = self.network_body(
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\networks.py", line 237, in forward
+    encoded_self = self.observation_encoder(inputs)
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\networks.py", line 110, in forward
+    processed_obs = processor(obs_input)
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\encoders.py", line 100, in forward
+    inputs = self.normalizer(inputs)
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\encoders.py", line 16, in forward
+    (inputs - self.running_mean)
+9
+div_1
+	div_1_min
+	div_1_maxclampnode_Clip_100"Clip
+â
+obs_1
+1network_body.processors.1.normalizer.running_meansub_4
+node_sub_4"SubJ”
+	namespace≈: mlagents.trainers.torch_entities.networks.SimpleActor/network_body: mlagents.trainers.torch_entities.networks.NetworkBody/network_body.observation_encoder: mlagents.trainers.torch_entities.networks.ObservationEncoder/network_body.observation_encoder.processors.1: mlagents.trainers.torch_entities.encoders.VectorInput/network_body.observation_encoder.processors.1.normalizer: mlagents.trainers.torch_entities.encoders.Normalizer/sub_4: aten.sub.TensorJŸ
+pkg.torch.onnx.class_hierarchy∂['mlagents.trainers.torch_entities.networks.SimpleActor', 'mlagents.trainers.torch_entities.networks.NetworkBody', 'mlagents.trainers.torch_entities.networks.ObservationEncoder', 'mlagents.trainers.torch_entities.encoders.VectorInput', 'mlagents.trainers.torch_entities.encoders.Normalizer', 'aten.sub.Tensor']J∫
+pkg.torch.onnx.fx_nodeü%sub_4 : [num_users=1] = call_function[target=torch.ops.aten.sub.Tensor](args = (%inputs_1, %b_network_body_processors_1_normalizer_running_mean), kwargs = {})JÕ
+pkg.torch.onnx.name_scopesÆ['', 'network_body', 'network_body.observation_encoder', 'network_body.observation_encoder.processors.1', 'network_body.observation_encoder.processors.1.normalizer', 'sub_4']Jı
+pkg.torch.onnx.stack_trace÷File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\networks.py", line 682, in forward
+    encoding, memories_out = self.network_body(
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\networks.py", line 237, in forward
+    encoded_self = self.observation_encoder(inputs)
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\networks.py", line 110, in forward
+    processed_obs = processor(obs_input)
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\encoders.py", line 100, in forward
+    inputs = self.normalizer(inputs)
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\encoders.py", line 16, in forward
+    (inputs - self.running_mean)
+≠
+sub_4
+sqrt_1div_3
+node_div_3"DivJ”
+	namespace≈: mlagents.trainers.torch_entities.networks.SimpleActor/network_body: mlagents.trainers.torch_entities.networks.NetworkBody/network_body.observation_encoder: mlagents.trainers.torch_entities.networks.ObservationEncoder/network_body.observation_encoder.processors.1: mlagents.trainers.torch_entities.encoders.VectorInput/network_body.observation_encoder.processors.1.normalizer: mlagents.trainers.torch_entities.encoders.Normalizer/div_3: aten.div.TensorJŸ
+pkg.torch.onnx.class_hierarchy∂['mlagents.trainers.torch_entities.networks.SimpleActor', 'mlagents.trainers.torch_entities.networks.NetworkBody', 'mlagents.trainers.torch_entities.networks.ObservationEncoder', 'mlagents.trainers.torch_entities.encoders.VectorInput', 'mlagents.trainers.torch_entities.encoders.Normalizer', 'aten.div.Tensor']Jâ
+pkg.torch.onnx.fx_nodeo%div_3 : [num_users=1] = call_function[target=torch.ops.aten.div.Tensor](args = (%sub_4, %sqrt_1), kwargs = {})JÕ
+pkg.torch.onnx.name_scopesÆ['', 'network_body', 'network_body.observation_encoder', 'network_body.observation_encoder.processors.1', 'network_body.observation_encoder.processors.1.normalizer', 'div_3']Jı
+pkg.torch.onnx.stack_trace÷File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\networks.py", line 682, in forward
+    encoding, memories_out = self.network_body(
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\networks.py", line 237, in forward
+    encoded_self = self.observation_encoder(inputs)
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\networks.py", line 110, in forward
+    processed_obs = processor(obs_input)
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\encoders.py", line 100, in forward
+    inputs = self.normalizer(inputs)
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\encoders.py", line 16, in forward
+    (inputs - self.running_mean)
+;
+div_3
+	div_1_min
+	div_1_maxclamp_1node_Clip_101"Clip
+í
+clamp
+clamp_1catnode_cat"Concat*
+axis†J˛
+	namespace: mlagents.trainers.torch_entities.networks.SimpleActor/network_body: mlagents.trainers.torch_entities.networks.NetworkBody/network_body.observation_encoder: mlagents.trainers.torch_entities.networks.ObservationEncoder/cat: aten.cat.defaultJÈ
+pkg.torch.onnx.class_hierarchy∆['mlagents.trainers.torch_entities.networks.SimpleActor', 'mlagents.trainers.torch_entities.networks.NetworkBody', 'mlagents.trainers.torch_entities.networks.ObservationEncoder', 'aten.cat.default']Jé
+pkg.torch.onnx.fx_nodet%cat : [num_users=1] = call_function[target=torch.ops.aten.cat.default](args = ([%clamp, %clamp_1], 1), kwargs = {})J]
+pkg.torch.onnx.name_scopes?['', 'network_body', 'network_body.observation_encoder', 'cat']J˛
+pkg.torch.onnx.stack_traceﬂFile "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\networks.py", line 682, in forward
+    encoding, memories_out = self.network_body(
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\networks.py", line 237, in forward
+    encoded_self = self.observation_encoder(inputs)
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\networks.py", line 115, in forward
+    encoded_self = torch.cat(encodes, dim=1)
+ı
+cat
+.network_body._body_endoder.seq_layers.0.weight
+,network_body._body_endoder.seq_layers.0.biaslinearnode_linear"Gemm*
+transA †*
+transB†*
+alpha  Ä?†*
+beta  Ä?†Jå
+	namespace˛: mlagents.trainers.torch_entities.networks.SimpleActor/network_body: mlagents.trainers.torch_entities.networks.NetworkBody/network_body._body_endoder: mlagents.trainers.torch_entities.layers.LinearEncoder/network_body._body_endoder.seq_layers: torch.nn.modules.container.Sequential/network_body._body_endoder.seq_layers.0: torch.nn.modules.linear.Linear/linear: aten.linear.defaultJ∞
+pkg.torch.onnx.class_hierarchyç['mlagents.trainers.torch_entities.networks.SimpleActor', 'mlagents.trainers.torch_entities.networks.NetworkBody', 'mlagents.trainers.torch_entities.layers.LinearEncoder', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.linear.Linear', 'aten.linear.default']JË
+pkg.torch.onnx.fx_nodeÕ%linear : [num_users=2] = call_function[target=torch.ops.aten.linear.default](args = (%cat, %p_network_body__body_endoder_seq_layers_0_weight, %p_network_body__body_endoder_seq_layers_0_bias), kwargs = {})JØ
+pkg.torch.onnx.name_scopesê['', 'network_body', 'network_body._body_endoder', 'network_body._body_endoder.seq_layers', 'network_body._body_endoder.seq_layers.0', 'linear']J÷
+pkg.torch.onnx.stack_trace∑File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\networks.py", line 682, in forward
+    encoding, memories_out = self.network_body(
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\networks.py", line 244, in forward
+    encoding = self._body_endoder(encoded_self)
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\layers.py", line 169, in forward
+    return self.seq_layers(input_tensor)
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\torch\nn\modules\container.py", line 250, in forward
+    input = module(input)
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\torch\nn\modules\linear.py", line 134, in forward
+    return F.linear(input, self.weight, self.bias)
+Ø
+linearsigmoidnode_sigmoid"SigmoidJù
+	namespaceè: mlagents.trainers.torch_entities.networks.SimpleActor/network_body: mlagents.trainers.torch_entities.networks.NetworkBody/network_body._body_endoder: mlagents.trainers.torch_entities.layers.LinearEncoder/network_body._body_endoder.seq_layers: torch.nn.modules.container.Sequential/network_body._body_endoder.seq_layers.1: mlagents.trainers.torch_entities.layers.Swish/sigmoid: aten.sigmoid.defaultJ¿
+pkg.torch.onnx.class_hierarchyù['mlagents.trainers.torch_entities.networks.SimpleActor', 'mlagents.trainers.torch_entities.networks.NetworkBody', 'mlagents.trainers.torch_entities.layers.LinearEncoder', 'torch.nn.modules.container.Sequential', 'mlagents.trainers.torch_entities.layers.Swish', 'aten.sigmoid.default']Jâ
+pkg.torch.onnx.fx_nodeo%sigmoid : [num_users=1] = call_function[target=torch.ops.aten.sigmoid.default](args = (%linear,), kwargs = {})J∞
+pkg.torch.onnx.name_scopesë['', 'network_body', 'network_body._body_endoder', 'network_body._body_endoder.seq_layers', 'network_body._body_endoder.seq_layers.1', 'sigmoid']J‚
+pkg.torch.onnx.stack_trace√File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\networks.py", line 682, in forward
+    encoding, memories_out = self.network_body(
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\networks.py", line 244, in forward
+    encoding = self._body_endoder(encoded_self)
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\layers.py", line 169, in forward
+    return self.seq_layers(input_tensor)
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\torch\nn\modules\container.py", line 250, in forward
+    input = module(input)
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\layers.py", line 10, in forward
+    return torch.mul(data, torch.sigmoid(data))
+©
+linear
+sigmoidmul_14node_mul_14"MulJó
+	namespaceâ: mlagents.trainers.torch_entities.networks.SimpleActor/network_body: mlagents.trainers.torch_entities.networks.NetworkBody/network_body._body_endoder: mlagents.trainers.torch_entities.layers.LinearEncoder/network_body._body_endoder.seq_layers: torch.nn.modules.container.Sequential/network_body._body_endoder.seq_layers.1: mlagents.trainers.torch_entities.layers.Swish/mul_14: aten.mul.TensorJª
+pkg.torch.onnx.class_hierarchyò['mlagents.trainers.torch_entities.networks.SimpleActor', 'mlagents.trainers.torch_entities.networks.NetworkBody', 'mlagents.trainers.torch_entities.layers.LinearEncoder', 'torch.nn.modules.container.Sequential', 'mlagents.trainers.torch_entities.layers.Swish', 'aten.mul.Tensor']Jå
+pkg.torch.onnx.fx_noder%mul_14 : [num_users=1] = call_function[target=torch.ops.aten.mul.Tensor](args = (%linear, %sigmoid), kwargs = {})JØ
+pkg.torch.onnx.name_scopesê['', 'network_body', 'network_body._body_endoder', 'network_body._body_endoder.seq_layers', 'network_body._body_endoder.seq_layers.1', 'mul_14']J‚
+pkg.torch.onnx.stack_trace√File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\networks.py", line 682, in forward
+    encoding, memories_out = self.network_body(
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\networks.py", line 244, in forward
+    encoding = self._body_endoder(encoded_self)
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\layers.py", line 169, in forward
+    return self.seq_layers(input_tensor)
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\torch\nn\modules\container.py", line 250, in forward
+    input = module(input)
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\layers.py", line 10, in forward
+    return torch.mul(data, torch.sigmoid(data))
+Ö
+mul_14
+.network_body._body_endoder.seq_layers.2.weight
+,network_body._body_endoder.seq_layers.2.biaslinear_1node_linear_1"Gemm*
+transA †*
+transB†*
+alpha  Ä?†*
+beta  Ä?†Jé
+	namespaceÄ: mlagents.trainers.torch_entities.networks.SimpleActor/network_body: mlagents.trainers.torch_entities.networks.NetworkBody/network_body._body_endoder: mlagents.trainers.torch_entities.layers.LinearEncoder/network_body._body_endoder.seq_layers: torch.nn.modules.container.Sequential/network_body._body_endoder.seq_layers.2: torch.nn.modules.linear.Linear/linear_1: aten.linear.defaultJ∞
+pkg.torch.onnx.class_hierarchyç['mlagents.trainers.torch_entities.networks.SimpleActor', 'mlagents.trainers.torch_entities.networks.NetworkBody', 'mlagents.trainers.torch_entities.layers.LinearEncoder', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.linear.Linear', 'aten.linear.default']JÌ
+pkg.torch.onnx.fx_node“%linear_1 : [num_users=2] = call_function[target=torch.ops.aten.linear.default](args = (%mul_14, %p_network_body__body_endoder_seq_layers_2_weight, %p_network_body__body_endoder_seq_layers_2_bias), kwargs = {})J±
+pkg.torch.onnx.name_scopesí['', 'network_body', 'network_body._body_endoder', 'network_body._body_endoder.seq_layers', 'network_body._body_endoder.seq_layers.2', 'linear_1']J÷
+pkg.torch.onnx.stack_trace∑File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\networks.py", line 682, in forward
+    encoding, memories_out = self.network_body(
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\networks.py", line 244, in forward
+    encoding = self._body_endoder(encoded_self)
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\layers.py", line 169, in forward
+    return self.seq_layers(input_tensor)
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\torch\nn\modules\container.py", line 250, in forward
+    input = module(input)
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\torch\nn\modules\linear.py", line 134, in forward
+    return F.linear(input, self.weight, self.bias)
+Ω
+linear_1	sigmoid_1node_sigmoid_1"SigmoidJü
+	namespaceë: mlagents.trainers.torch_entities.networks.SimpleActor/network_body: mlagents.trainers.torch_entities.networks.NetworkBody/network_body._body_endoder: mlagents.trainers.torch_entities.layers.LinearEncoder/network_body._body_endoder.seq_layers: torch.nn.modules.container.Sequential/network_body._body_endoder.seq_layers.3: mlagents.trainers.torch_entities.layers.Swish/sigmoid_1: aten.sigmoid.defaultJ¿
+pkg.torch.onnx.class_hierarchyù['mlagents.trainers.torch_entities.networks.SimpleActor', 'mlagents.trainers.torch_entities.networks.NetworkBody', 'mlagents.trainers.torch_entities.layers.LinearEncoder', 'torch.nn.modules.container.Sequential', 'mlagents.trainers.torch_entities.layers.Swish', 'aten.sigmoid.default']Jç
+pkg.torch.onnx.fx_nodes%sigmoid_1 : [num_users=1] = call_function[target=torch.ops.aten.sigmoid.default](args = (%linear_1,), kwargs = {})J≤
+pkg.torch.onnx.name_scopesì['', 'network_body', 'network_body._body_endoder', 'network_body._body_endoder.seq_layers', 'network_body._body_endoder.seq_layers.3', 'sigmoid_1']J‚
+pkg.torch.onnx.stack_trace√File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\networks.py", line 682, in forward
+    encoding, memories_out = self.network_body(
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\networks.py", line 244, in forward
+    encoding = self._body_endoder(encoded_self)
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\layers.py", line 169, in forward
+    return self.seq_layers(input_tensor)
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\torch\nn\modules\container.py", line 250, in forward
+    input = module(input)
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\layers.py", line 10, in forward
+    return torch.mul(data, torch.sigmoid(data))
+±
+linear_1
+	sigmoid_1mul_21node_mul_21"MulJó
+	namespaceâ: mlagents.trainers.torch_entities.networks.SimpleActor/network_body: mlagents.trainers.torch_entities.networks.NetworkBody/network_body._body_endoder: mlagents.trainers.torch_entities.layers.LinearEncoder/network_body._body_endoder.seq_layers: torch.nn.modules.container.Sequential/network_body._body_endoder.seq_layers.3: mlagents.trainers.torch_entities.layers.Swish/mul_21: aten.mul.TensorJª
+pkg.torch.onnx.class_hierarchyò['mlagents.trainers.torch_entities.networks.SimpleActor', 'mlagents.trainers.torch_entities.networks.NetworkBody', 'mlagents.trainers.torch_entities.layers.LinearEncoder', 'torch.nn.modules.container.Sequential', 'mlagents.trainers.torch_entities.layers.Swish', 'aten.mul.Tensor']Jê
+pkg.torch.onnx.fx_nodev%mul_21 : [num_users=1] = call_function[target=torch.ops.aten.mul.Tensor](args = (%linear_1, %sigmoid_1), kwargs = {})JØ
+pkg.torch.onnx.name_scopesê['', 'network_body', 'network_body._body_endoder', 'network_body._body_endoder.seq_layers', 'network_body._body_endoder.seq_layers.3', 'mul_21']J‚
+pkg.torch.onnx.stack_trace√File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\networks.py", line 682, in forward
+    encoding, memories_out = self.network_body(
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\networks.py", line 244, in forward
+    encoding = self._body_endoder(encoded_self)
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\layers.py", line 169, in forward
+    return self.seq_layers(input_tensor)
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\torch\nn\modules\container.py", line 250, in forward
+    input = module(input)
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\layers.py", line 10, in forward
+    return torch.mul(data, torch.sigmoid(data))
+Ö
+mul_21
+.network_body._body_endoder.seq_layers.4.weight
+,network_body._body_endoder.seq_layers.4.biaslinear_2node_linear_2"Gemm*
+transA †*
+transB†*
+alpha  Ä?†*
+beta  Ä?†Jé
+	namespaceÄ: mlagents.trainers.torch_entities.networks.SimpleActor/network_body: mlagents.trainers.torch_entities.networks.NetworkBody/network_body._body_endoder: mlagents.trainers.torch_entities.layers.LinearEncoder/network_body._body_endoder.seq_layers: torch.nn.modules.container.Sequential/network_body._body_endoder.seq_layers.4: torch.nn.modules.linear.Linear/linear_2: aten.linear.defaultJ∞
+pkg.torch.onnx.class_hierarchyç['mlagents.trainers.torch_entities.networks.SimpleActor', 'mlagents.trainers.torch_entities.networks.NetworkBody', 'mlagents.trainers.torch_entities.layers.LinearEncoder', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.linear.Linear', 'aten.linear.default']JÌ
+pkg.torch.onnx.fx_node“%linear_2 : [num_users=2] = call_function[target=torch.ops.aten.linear.default](args = (%mul_21, %p_network_body__body_endoder_seq_layers_4_weight, %p_network_body__body_endoder_seq_layers_4_bias), kwargs = {})J±
+pkg.torch.onnx.name_scopesí['', 'network_body', 'network_body._body_endoder', 'network_body._body_endoder.seq_layers', 'network_body._body_endoder.seq_layers.4', 'linear_2']J÷
+pkg.torch.onnx.stack_trace∑File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\networks.py", line 682, in forward
+    encoding, memories_out = self.network_body(
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\networks.py", line 244, in forward
+    encoding = self._body_endoder(encoded_self)
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\layers.py", line 169, in forward
+    return self.seq_layers(input_tensor)
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\torch\nn\modules\container.py", line 250, in forward
+    input = module(input)
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\torch\nn\modules\linear.py", line 134, in forward
+    return F.linear(input, self.weight, self.bias)
+Ω
+linear_2	sigmoid_2node_sigmoid_2"SigmoidJü
+	namespaceë: mlagents.trainers.torch_entities.networks.SimpleActor/network_body: mlagents.trainers.torch_entities.networks.NetworkBody/network_body._body_endoder: mlagents.trainers.torch_entities.layers.LinearEncoder/network_body._body_endoder.seq_layers: torch.nn.modules.container.Sequential/network_body._body_endoder.seq_layers.5: mlagents.trainers.torch_entities.layers.Swish/sigmoid_2: aten.sigmoid.defaultJ¿
+pkg.torch.onnx.class_hierarchyù['mlagents.trainers.torch_entities.networks.SimpleActor', 'mlagents.trainers.torch_entities.networks.NetworkBody', 'mlagents.trainers.torch_entities.layers.LinearEncoder', 'torch.nn.modules.container.Sequential', 'mlagents.trainers.torch_entities.layers.Swish', 'aten.sigmoid.default']Jç
+pkg.torch.onnx.fx_nodes%sigmoid_2 : [num_users=1] = call_function[target=torch.ops.aten.sigmoid.default](args = (%linear_2,), kwargs = {})J≤
+pkg.torch.onnx.name_scopesì['', 'network_body', 'network_body._body_endoder', 'network_body._body_endoder.seq_layers', 'network_body._body_endoder.seq_layers.5', 'sigmoid_2']J‚
+pkg.torch.onnx.stack_trace√File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\networks.py", line 682, in forward
+    encoding, memories_out = self.network_body(
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\networks.py", line 244, in forward
+    encoding = self._body_endoder(encoded_self)
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\layers.py", line 169, in forward
+    return self.seq_layers(input_tensor)
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\torch\nn\modules\container.py", line 250, in forward
+    input = module(input)
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\layers.py", line 10, in forward
+    return torch.mul(data, torch.sigmoid(data))
+±
+linear_2
+	sigmoid_2mul_28node_mul_28"MulJó
+	namespaceâ: mlagents.trainers.torch_entities.networks.SimpleActor/network_body: mlagents.trainers.torch_entities.networks.NetworkBody/network_body._body_endoder: mlagents.trainers.torch_entities.layers.LinearEncoder/network_body._body_endoder.seq_layers: torch.nn.modules.container.Sequential/network_body._body_endoder.seq_layers.5: mlagents.trainers.torch_entities.layers.Swish/mul_28: aten.mul.TensorJª
+pkg.torch.onnx.class_hierarchyò['mlagents.trainers.torch_entities.networks.SimpleActor', 'mlagents.trainers.torch_entities.networks.NetworkBody', 'mlagents.trainers.torch_entities.layers.LinearEncoder', 'torch.nn.modules.container.Sequential', 'mlagents.trainers.torch_entities.layers.Swish', 'aten.mul.Tensor']Jê
+pkg.torch.onnx.fx_nodev%mul_28 : [num_users=2] = call_function[target=torch.ops.aten.mul.Tensor](args = (%linear_2, %sigmoid_2), kwargs = {})JØ
+pkg.torch.onnx.name_scopesê['', 'network_body', 'network_body._body_endoder', 'network_body._body_endoder.seq_layers', 'network_body._body_endoder.seq_layers.5', 'mul_28']J‚
+pkg.torch.onnx.stack_trace√File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\networks.py", line 682, in forward
+    encoding, memories_out = self.network_body(
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\networks.py", line 244, in forward
+    encoding = self._body_endoder(encoded_self)
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\layers.py", line 169, in forward
+    return self.seq_layers(input_tensor)
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\torch\nn\modules\container.py", line 250, in forward
+    input = module(input)
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\layers.py", line 10, in forward
+    return torch.mul(data, torch.sigmoid(data))
+Ñ	
+action_masks
+val_18
+val_22
+val_26
+val_26slice_2node_slice_2"SliceJ—
+	namespace√: mlagents.trainers.torch_entities.networks.SimpleActor/action_model._discrete_distribution: mlagents.trainers.torch_entities.distributions.MultiCategoricalDistribution/slice_2: aten.slice.TensorJ¿
+pkg.torch.onnx.class_hierarchyù['mlagents.trainers.torch_entities.networks.SimpleActor', 'mlagents.trainers.torch_entities.distributions.MultiCategoricalDistribution', 'aten.slice.Tensor']Jè
+pkg.torch.onnx.fx_nodeu%slice_2 : [num_users=2] = call_function[target=torch.ops.aten.slice.Tensor](args = (%slice_1, 1, 0, 3), kwargs = {})JT
+pkg.torch.onnx.name_scopes6['', 'action_model._discrete_distribution', 'slice_2']J∂
+pkg.torch.onnx.stack_traceóFile "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\networks.py", line 692, in forward
+    ) = self.action_model.get_action_out(encoding, masks)
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\distributions.py", line 242, in forward
+    masks = self._split_masks(masks)
+Ñ	
+action_masks
+val_22
+val_44
+val_26
+val_26slice_4node_slice_4"SliceJ—
+	namespace√: mlagents.trainers.torch_entities.networks.SimpleActor/action_model._discrete_distribution: mlagents.trainers.torch_entities.distributions.MultiCategoricalDistribution/slice_4: aten.slice.TensorJ¿
+pkg.torch.onnx.class_hierarchyù['mlagents.trainers.torch_entities.networks.SimpleActor', 'mlagents.trainers.torch_entities.distributions.MultiCategoricalDistribution', 'aten.slice.Tensor']Jè
+pkg.torch.onnx.fx_nodeu%slice_4 : [num_users=2] = call_function[target=torch.ops.aten.slice.Tensor](args = (%slice_3, 1, 3, 8), kwargs = {})JT
+pkg.torch.onnx.name_scopes6['', 'action_model._discrete_distribution', 'slice_4']J∂
+pkg.torch.onnx.stack_traceóFile "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\networks.py", line 692, in forward
+    ) = self.action_model.get_action_out(encoding, masks)
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\distributions.py", line 242, in forward
+    masks = self._split_masks(masks)
+”
+mul_28
+5action_model._discrete_distribution.branches.0.weight
+3action_model._discrete_distribution.branches.0.biaslinear_3node_linear_3"Gemm*
+transA †*
+transB†*
+alpha  Ä?†*
+beta  Ä?†J£
+	namespaceï: mlagents.trainers.torch_entities.networks.SimpleActor/action_model._discrete_distribution: mlagents.trainers.torch_entities.distributions.MultiCategoricalDistribution/action_model._discrete_distribution.branches.0: torch.nn.modules.linear.Linear/linear_3: aten.linear.defaultJ‰
+pkg.torch.onnx.class_hierarchy¡['mlagents.trainers.torch_entities.networks.SimpleActor', 'mlagents.trainers.torch_entities.distributions.MultiCategoricalDistribution', 'torch.nn.modules.linear.Linear', 'aten.linear.default']J˚
+pkg.torch.onnx.fx_node‡%linear_3 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%mul_28, %p_action_model__discrete_distribution_branches_0_weight, %p_action_model__discrete_distribution_branches_0_bias), kwargs = {})Já
+pkg.torch.onnx.name_scopesi['', 'action_model._discrete_distribution', 'action_model._discrete_distribution.branches.0', 'linear_3']JÈ
+pkg.torch.onnx.stack_trace File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\networks.py", line 692, in forward
+    ) = self.action_model.get_action_out(encoding, masks)
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\distributions.py", line 244, in forward
+    logits = branch(inputs)
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\torch\nn\modules\linear.py", line 134, in forward
+    return F.linear(input, self.weight, self.bias)
+Í
+slice_2
+val_49mul_41node_mul_41"MulJŒ
+	namespace¿: mlagents.trainers.torch_entities.networks.SimpleActor/action_model._discrete_distribution: mlagents.trainers.torch_entities.distributions.MultiCategoricalDistribution/mul_41: aten.mul.TensorJæ
+pkg.torch.onnx.class_hierarchyõ['mlagents.trainers.torch_entities.networks.SimpleActor', 'mlagents.trainers.torch_entities.distributions.MultiCategoricalDistribution', 'aten.mul.Tensor']Jâ
+pkg.torch.onnx.fx_nodeo%mul_41 : [num_users=1] = call_function[target=torch.ops.aten.mul.Tensor](args = (%slice_2, -1.0), kwargs = {})JS
+pkg.torch.onnx.name_scopes5['', 'action_model._discrete_distribution', 'mul_41']J…
+pkg.torch.onnx.stack_trace™File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\networks.py", line 692, in forward
+    ) = self.action_model.get_action_out(encoding, masks)
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\distributions.py", line 245, in forward
+    norm_logits = self._mask_branch(logits, masks[idx])
+Á
+mul_41
+val_50add_60node_add_60"AddJŒ
+	namespace¿: mlagents.trainers.torch_entities.networks.SimpleActor/action_model._discrete_distribution: mlagents.trainers.torch_entities.distributions.MultiCategoricalDistribution/add_60: aten.add.TensorJæ
+pkg.torch.onnx.class_hierarchyõ['mlagents.trainers.torch_entities.networks.SimpleActor', 'mlagents.trainers.torch_entities.distributions.MultiCategoricalDistribution', 'aten.add.Tensor']Já
+pkg.torch.onnx.fx_nodem%add_60 : [num_users=1] = call_function[target=torch.ops.aten.add.Tensor](args = (%mul_41, 1.0), kwargs = {})JS
+pkg.torch.onnx.name_scopes5['', 'action_model._discrete_distribution', 'add_60']J…
+pkg.torch.onnx.stack_trace™File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\networks.py", line 692, in forward
+    ) = self.action_model.get_action_out(encoding, masks)
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\distributions.py", line 245, in forward
+    norm_logits = self._mask_branch(logits, masks[idx])
+Ò
+linear_3
+slice_2mul_44node_mul_44"MulJŒ
+	namespace¿: mlagents.trainers.torch_entities.networks.SimpleActor/action_model._discrete_distribution: mlagents.trainers.torch_entities.distributions.MultiCategoricalDistribution/mul_44: aten.mul.TensorJæ
+pkg.torch.onnx.class_hierarchyõ['mlagents.trainers.torch_entities.networks.SimpleActor', 'mlagents.trainers.torch_entities.distributions.MultiCategoricalDistribution', 'aten.mul.Tensor']Jé
+pkg.torch.onnx.fx_nodet%mul_44 : [num_users=1] = call_function[target=torch.ops.aten.mul.Tensor](args = (%linear_3, %slice_2), kwargs = {})JS
+pkg.torch.onnx.name_scopes5['', 'action_model._discrete_distribution', 'mul_44']J…
+pkg.torch.onnx.stack_trace™File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\networks.py", line 692, in forward
+    ) = self.action_model.get_action_out(encoding, masks)
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\distributions.py", line 245, in forward
+    norm_logits = self._mask_branch(logits, masks[idx])
+Ô
+add_60
+val_51mul_47node_mul_47"MulJŒ
+	namespace¿: mlagents.trainers.torch_entities.networks.SimpleActor/action_model._discrete_distribution: mlagents.trainers.torch_entities.distributions.MultiCategoricalDistribution/mul_47: aten.mul.TensorJæ
+pkg.torch.onnx.class_hierarchyõ['mlagents.trainers.torch_entities.networks.SimpleActor', 'mlagents.trainers.torch_entities.distributions.MultiCategoricalDistribution', 'aten.mul.Tensor']Jè
+pkg.torch.onnx.fx_nodeu%mul_47 : [num_users=1] = call_function[target=torch.ops.aten.mul.Tensor](args = (%add_60, 100000000.0), kwargs = {})JS
+pkg.torch.onnx.name_scopes5['', 'action_model._discrete_distribution', 'mul_47']J…
+pkg.torch.onnx.stack_trace™File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\networks.py", line 692, in forward
+    ) = self.action_model.get_action_out(encoding, masks)
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\distributions.py", line 245, in forward
+    norm_logits = self._mask_branch(logits, masks[idx])
+Î
+mul_44
+mul_47sub_23node_sub_23"SubJŒ
+	namespace¿: mlagents.trainers.torch_entities.networks.SimpleActor/action_model._discrete_distribution: mlagents.trainers.torch_entities.distributions.MultiCategoricalDistribution/sub_23: aten.sub.TensorJæ
+pkg.torch.onnx.class_hierarchyõ['mlagents.trainers.torch_entities.networks.SimpleActor', 'mlagents.trainers.torch_entities.distributions.MultiCategoricalDistribution', 'aten.sub.Tensor']Jã
+pkg.torch.onnx.fx_nodeq%sub_23 : [num_users=1] = call_function[target=torch.ops.aten.sub.Tensor](args = (%mul_44, %mul_47), kwargs = {})JS
+pkg.torch.onnx.name_scopes5['', 'action_model._discrete_distribution', 'sub_23']J…
+pkg.torch.onnx.stack_trace™File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\networks.py", line 692, in forward
+    ) = self.action_model.get_action_out(encoding, masks)
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\distributions.py", line 245, in forward
+    norm_logits = self._mask_branch(logits, masks[idx])
+Ä	
+sub_23softmaxnode_softmax"Softmax*
+axisˇˇˇˇˇˇˇˇˇ†J–
+	namespace¬: mlagents.trainers.torch_entities.networks.SimpleActor/action_model._discrete_distribution: mlagents.trainers.torch_entities.distributions.MultiCategoricalDistribution/softmax: aten.softmax.intJø
+pkg.torch.onnx.class_hierarchyú['mlagents.trainers.torch_entities.networks.SimpleActor', 'mlagents.trainers.torch_entities.distributions.MultiCategoricalDistribution', 'aten.softmax.int']Jà
+pkg.torch.onnx.fx_noden%softmax : [num_users=2] = call_function[target=torch.ops.aten.softmax.int](args = (%sub_23, -1), kwargs = {})JT
+pkg.torch.onnx.name_scopes6['', 'action_model._discrete_distribution', 'softmax']J…
+pkg.torch.onnx.stack_trace™File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\networks.py", line 692, in forward
+    ) = self.action_model.get_action_out(encoding, masks)
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\distributions.py", line 246, in forward
+    distribution = CategoricalDistInstance(norm_logits)
+”
+mul_28
+5action_model._discrete_distribution.branches.1.weight
+3action_model._discrete_distribution.branches.1.biaslinear_4node_linear_4"Gemm*
+transA †*
+transB†*
+alpha  Ä?†*
+beta  Ä?†J£
+	namespaceï: mlagents.trainers.torch_entities.networks.SimpleActor/action_model._discrete_distribution: mlagents.trainers.torch_entities.distributions.MultiCategoricalDistribution/action_model._discrete_distribution.branches.1: torch.nn.modules.linear.Linear/linear_4: aten.linear.defaultJ‰
+pkg.torch.onnx.class_hierarchy¡['mlagents.trainers.torch_entities.networks.SimpleActor', 'mlagents.trainers.torch_entities.distributions.MultiCategoricalDistribution', 'torch.nn.modules.linear.Linear', 'aten.linear.default']J˚
+pkg.torch.onnx.fx_node‡%linear_4 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%mul_28, %p_action_model__discrete_distribution_branches_1_weight, %p_action_model__discrete_distribution_branches_1_bias), kwargs = {})Já
+pkg.torch.onnx.name_scopesi['', 'action_model._discrete_distribution', 'action_model._discrete_distribution.branches.1', 'linear_4']JÈ
+pkg.torch.onnx.stack_trace File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\networks.py", line 692, in forward
+    ) = self.action_model.get_action_out(encoding, masks)
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\distributions.py", line 244, in forward
+    logits = branch(inputs)
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\torch\nn\modules\linear.py", line 134, in forward
+    return F.linear(input, self.weight, self.bias)
+Í
+slice_4
+val_49mul_50node_mul_50"MulJŒ
+	namespace¿: mlagents.trainers.torch_entities.networks.SimpleActor/action_model._discrete_distribution: mlagents.trainers.torch_entities.distributions.MultiCategoricalDistribution/mul_50: aten.mul.TensorJæ
+pkg.torch.onnx.class_hierarchyõ['mlagents.trainers.torch_entities.networks.SimpleActor', 'mlagents.trainers.torch_entities.distributions.MultiCategoricalDistribution', 'aten.mul.Tensor']Jâ
+pkg.torch.onnx.fx_nodeo%mul_50 : [num_users=1] = call_function[target=torch.ops.aten.mul.Tensor](args = (%slice_4, -1.0), kwargs = {})JS
+pkg.torch.onnx.name_scopes5['', 'action_model._discrete_distribution', 'mul_50']J…
+pkg.torch.onnx.stack_trace™File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\networks.py", line 692, in forward
+    ) = self.action_model.get_action_out(encoding, masks)
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\distributions.py", line 245, in forward
+    norm_logits = self._mask_branch(logits, masks[idx])
+Á
+mul_50
+val_50add_70node_add_70"AddJŒ
+	namespace¿: mlagents.trainers.torch_entities.networks.SimpleActor/action_model._discrete_distribution: mlagents.trainers.torch_entities.distributions.MultiCategoricalDistribution/add_70: aten.add.TensorJæ
+pkg.torch.onnx.class_hierarchyõ['mlagents.trainers.torch_entities.networks.SimpleActor', 'mlagents.trainers.torch_entities.distributions.MultiCategoricalDistribution', 'aten.add.Tensor']Já
+pkg.torch.onnx.fx_nodem%add_70 : [num_users=1] = call_function[target=torch.ops.aten.add.Tensor](args = (%mul_50, 1.0), kwargs = {})JS
+pkg.torch.onnx.name_scopes5['', 'action_model._discrete_distribution', 'add_70']J…
+pkg.torch.onnx.stack_trace™File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\networks.py", line 692, in forward
+    ) = self.action_model.get_action_out(encoding, masks)
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\distributions.py", line 245, in forward
+    norm_logits = self._mask_branch(logits, masks[idx])
+Ò
+linear_4
+slice_4mul_55node_mul_55"MulJŒ
+	namespace¿: mlagents.trainers.torch_entities.networks.SimpleActor/action_model._discrete_distribution: mlagents.trainers.torch_entities.distributions.MultiCategoricalDistribution/mul_55: aten.mul.TensorJæ
+pkg.torch.onnx.class_hierarchyõ['mlagents.trainers.torch_entities.networks.SimpleActor', 'mlagents.trainers.torch_entities.distributions.MultiCategoricalDistribution', 'aten.mul.Tensor']Jé
+pkg.torch.onnx.fx_nodet%mul_55 : [num_users=1] = call_function[target=torch.ops.aten.mul.Tensor](args = (%linear_4, %slice_4), kwargs = {})JS
+pkg.torch.onnx.name_scopes5['', 'action_model._discrete_distribution', 'mul_55']J…
+pkg.torch.onnx.stack_trace™File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\networks.py", line 692, in forward
+    ) = self.action_model.get_action_out(encoding, masks)
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\distributions.py", line 245, in forward
+    norm_logits = self._mask_branch(logits, masks[idx])
+Ô
+add_70
+val_51mul_58node_mul_58"MulJŒ
+	namespace¿: mlagents.trainers.torch_entities.networks.SimpleActor/action_model._discrete_distribution: mlagents.trainers.torch_entities.distributions.MultiCategoricalDistribution/mul_58: aten.mul.TensorJæ
+pkg.torch.onnx.class_hierarchyõ['mlagents.trainers.torch_entities.networks.SimpleActor', 'mlagents.trainers.torch_entities.distributions.MultiCategoricalDistribution', 'aten.mul.Tensor']Jè
+pkg.torch.onnx.fx_nodeu%mul_58 : [num_users=1] = call_function[target=torch.ops.aten.mul.Tensor](args = (%add_70, 100000000.0), kwargs = {})JS
+pkg.torch.onnx.name_scopes5['', 'action_model._discrete_distribution', 'mul_58']J…
+pkg.torch.onnx.stack_trace™File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\networks.py", line 692, in forward
+    ) = self.action_model.get_action_out(encoding, masks)
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\distributions.py", line 245, in forward
+    norm_logits = self._mask_branch(logits, masks[idx])
+Î
+mul_55
+mul_58sub_29node_sub_29"SubJŒ
+	namespace¿: mlagents.trainers.torch_entities.networks.SimpleActor/action_model._discrete_distribution: mlagents.trainers.torch_entities.distributions.MultiCategoricalDistribution/sub_29: aten.sub.TensorJæ
+pkg.torch.onnx.class_hierarchyõ['mlagents.trainers.torch_entities.networks.SimpleActor', 'mlagents.trainers.torch_entities.distributions.MultiCategoricalDistribution', 'aten.sub.Tensor']Jã
+pkg.torch.onnx.fx_nodeq%sub_29 : [num_users=1] = call_function[target=torch.ops.aten.sub.Tensor](args = (%mul_55, %mul_58), kwargs = {})JS
+pkg.torch.onnx.name_scopes5['', 'action_model._discrete_distribution', 'sub_29']J…
+pkg.torch.onnx.stack_trace™File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\networks.py", line 692, in forward
+    ) = self.action_model.get_action_out(encoding, masks)
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\distributions.py", line 245, in forward
+    norm_logits = self._mask_branch(logits, masks[idx])
+ä	
+sub_29	softmax_1node_softmax_1"Softmax*
+axisˇˇˇˇˇˇˇˇˇ†J“
+	namespaceƒ: mlagents.trainers.torch_entities.networks.SimpleActor/action_model._discrete_distribution: mlagents.trainers.torch_entities.distributions.MultiCategoricalDistribution/softmax_1: aten.softmax.intJø
+pkg.torch.onnx.class_hierarchyú['mlagents.trainers.torch_entities.networks.SimpleActor', 'mlagents.trainers.torch_entities.distributions.MultiCategoricalDistribution', 'aten.softmax.int']Jä
+pkg.torch.onnx.fx_nodep%softmax_1 : [num_users=2] = call_function[target=torch.ops.aten.softmax.int](args = (%sub_29, -1), kwargs = {})JV
+pkg.torch.onnx.name_scopes8['', 'action_model._discrete_distribution', 'softmax_1']J…
+pkg.torch.onnx.stack_trace™File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\networks.py", line 692, in forward
+    ) = self.action_model.get_action_out(encoding, masks)
+  File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\distributions.py", line 246, in forward
+    distribution = CategoricalDistInstance(norm_logits)
+∆
+softmaxval_52node_Log_52"LogJj
+	namespace]: mlagents.trainers.torch_entities.networks.SimpleActor/multinomial: aten.multinomial.defaultJw
+pkg.torch.onnx.class_hierarchyU['mlagents.trainers.torch_entities.networks.SimpleActor', 'aten.multinomial.default']Jî
+pkg.torch.onnx.fx_nodez%multinomial : [num_users=1] = call_function[target=torch.ops.aten.multinomial.default](args = (%softmax, 1), kwargs = {})J1
+pkg.torch.onnx.name_scopes['', 'multinomial']JÒ
+pkg.torch.onnx.stack_trace“File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\networks.py", line 692, in forward
+    ) = self.action_model.get_action_out(encoding, masks)
+˘
+val_52multinomialnode_multinomial"Multinomial*
+sample_size†*
+dtype†Jj
+	namespace]: mlagents.trainers.torch_entities.networks.SimpleActor/multinomial: aten.multinomial.defaultJw
+pkg.torch.onnx.class_hierarchyU['mlagents.trainers.torch_entities.networks.SimpleActor', 'aten.multinomial.default']Jî
+pkg.torch.onnx.fx_nodez%multinomial : [num_users=1] = call_function[target=torch.ops.aten.multinomial.default](args = (%softmax, 1), kwargs = {})J1
+pkg.torch.onnx.name_scopes['', 'multinomial']JÒ
+pkg.torch.onnx.stack_trace“File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\networks.py", line 692, in forward
+    ) = self.action_model.get_action_out(encoding, masks)
+–
+	softmax_1val_53node_Log_53"LogJl
+	namespace_: mlagents.trainers.torch_entities.networks.SimpleActor/multinomial_1: aten.multinomial.defaultJw
+pkg.torch.onnx.class_hierarchyU['mlagents.trainers.torch_entities.networks.SimpleActor', 'aten.multinomial.default']Jò
+pkg.torch.onnx.fx_node~%multinomial_1 : [num_users=1] = call_function[target=torch.ops.aten.multinomial.default](args = (%softmax_1, 1), kwargs = {})J3
+pkg.torch.onnx.name_scopes['', 'multinomial_1']JÒ
+pkg.torch.onnx.stack_trace“File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\networks.py", line 692, in forward
+    ) = self.action_model.get_action_out(encoding, masks)
+Ö
+val_53multinomial_1node_multinomial_1"Multinomial*
+sample_size†*
+dtype†Jl
+	namespace_: mlagents.trainers.torch_entities.networks.SimpleActor/multinomial_1: aten.multinomial.defaultJw
+pkg.torch.onnx.class_hierarchyU['mlagents.trainers.torch_entities.networks.SimpleActor', 'aten.multinomial.default']Jò
+pkg.torch.onnx.fx_node~%multinomial_1 : [num_users=1] = call_function[target=torch.ops.aten.multinomial.default](args = (%softmax_1, 1), kwargs = {})J3
+pkg.torch.onnx.name_scopes['', 'multinomial_1']JÒ
+pkg.torch.onnx.stack_trace“File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\networks.py", line 692, in forward
+    ) = self.action_model.get_action_out(encoding, masks)
+ﬂ
+multinomial
+multinomial_1discrete_actions
+node_cat_1"Concat*
+axis†J\
+	namespaceO: mlagents.trainers.torch_entities.networks.SimpleActor/cat_1: aten.cat.defaultJo
+pkg.torch.onnx.class_hierarchyM['mlagents.trainers.torch_entities.networks.SimpleActor', 'aten.cat.default']Jù
+pkg.torch.onnx.fx_nodeÇ%cat_1 : [num_users=1] = call_function[target=torch.ops.aten.cat.default](args = ([%multinomial, %multinomial_1], 1), kwargs = {})J+
+pkg.torch.onnx.name_scopes['', 'cat_1']JÒ
+pkg.torch.onnx.stack_trace“File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\networks.py", line 692, in forward
+    ) = self.action_model.get_action_out(encoding, masks)
+È
+softmaxargmaxnode_argmax"ArgMax*
+axis†*
+keepdims†*
+select_last_index †J`
+	namespaceS: mlagents.trainers.torch_entities.networks.SimpleActor/argmax: aten.argmax.defaultJr
+pkg.torch.onnx.class_hierarchyP['mlagents.trainers.torch_entities.networks.SimpleActor', 'aten.argmax.default']Jê
+pkg.torch.onnx.fx_nodev%argmax : [num_users=1] = call_function[target=torch.ops.aten.argmax.default](args = (%softmax, 1, True), kwargs = {})J,
+pkg.torch.onnx.name_scopes['', 'argmax']JÒ
+pkg.torch.onnx.stack_trace“File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\networks.py", line 692, in forward
+    ) = self.action_model.get_action_out(encoding, masks)
+˜
+	softmax_1argmax_1node_argmax_1"ArgMax*
+axis†*
+keepdims†*
+select_last_index †Jb
+	namespaceU: mlagents.trainers.torch_entities.networks.SimpleActor/argmax_1: aten.argmax.defaultJr
+pkg.torch.onnx.class_hierarchyP['mlagents.trainers.torch_entities.networks.SimpleActor', 'aten.argmax.default']Jî
+pkg.torch.onnx.fx_nodez%argmax_1 : [num_users=1] = call_function[target=torch.ops.aten.argmax.default](args = (%softmax_1, 1, True), kwargs = {})J.
+pkg.torch.onnx.name_scopes['', 'argmax_1']JÒ
+pkg.torch.onnx.stack_trace“File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\networks.py", line 692, in forward
+    ) = self.action_model.get_action_out(encoding, masks)
+ÿ
+argmax
+argmax_1deterministic_discrete_actions
+node_cat_3"Concat*
+axis†J\
+	namespaceO: mlagents.trainers.torch_entities.networks.SimpleActor/cat_3: aten.cat.defaultJo
+pkg.torch.onnx.class_hierarchyM['mlagents.trainers.torch_entities.networks.SimpleActor', 'aten.cat.default']Jí
+pkg.torch.onnx.fx_nodex%cat_3 : [num_users=1] = call_function[target=torch.ops.aten.cat.default](args = ([%argmax, %argmax_1], 1), kwargs = {})J+
+pkg.torch.onnx.name_scopes['', 'cat_3']JÒ
+pkg.torch.onnx.stack_trace“File "C:\Users\Anton\Unity\projekt-smart-drone-antond\mlagents-env\lib\site-packages\mlagents\trainers\torch_entities\networks.py", line 692, in forward
+    ) = self.action_model.get_action_out(encoding, masks)
+main_graph*Bversion_numberJ  @@*ÄB,network_body._body_endoder.seq_layers.0.biasj(
+locationDroneAgent-5013876.onnx.dataj
+offset1056j
+length1024p*ÄB,network_body._body_endoder.seq_layers.2.biasj(
+locationDroneAgent-5013876.onnx.dataj
+offset2080j
+length1024p*ÄB,network_body._body_endoder.seq_layers.4.biasj(
+locationDroneAgent-5013876.onnx.dataj
+offset3104j
+length1024p*äÄB5action_model._discrete_distribution.branches.0.weightj(
+locationDroneAgent-5013876.onnx.dataj
+offset4128j
+length3072p*GB3action_model._discrete_distribution.branches.0.biasJÉ±î<ÏÀˆªPº*OB3action_model._discrete_distribution.branches.1.biasJú=è˙[ºÒ≈Õ;¥å∂:<6†º*ÄÑB1network_body.processors.0.normalizer.running_meanj(
+locationDroneAgent-5013876.onnx.dataj
+offset0j
+length528p*]	B1network_body.processors.1.normalizer.running_meanJ$Å÷w@|k˙ø)1“=á/ù?†≥w<zıºf¶ê∫B%®8Ωw‘º*Bmemory_sizeJ    *.Bdiscrete_action_output_shapeJ  @@  †@*áÄçB.network_body._body_endoder.seq_layers.0.weightj(
+locationDroneAgent-5013876.onnx.dataj
+offset12320j
+length144384p*àÄÄB.network_body._body_endoder.seq_layers.2.weightj(
+locationDroneAgent-5013876.onnx.dataj
+offset156704j
+length262144p*àÄÄB.network_body._body_endoder.seq_layers.4.weightj(
+locationDroneAgent-5013876.onnx.dataj
+offset418848j
+length262144p*äÄB5action_model._discrete_distribution.branches.1.weightj(
+locationDroneAgent-5013876.onnx.dataj
+offset7200j
+length5120p*B	div_1_minJ  †¿*B	div_1_maxJ  †@*UÑBsqrtj(
+locationDroneAgent-5013876.onnx.dataj
+offset528j
+length528p*2	Bsqrt_1J$
+•(AYñ@≥®A¯Z‰?Y6n?‹?}—=Û⁄Í=yˆ&>*Bval_18J        *Bval_22J       *Bval_26J       *Bval_44J       *Bval_49J  Äø*Bval_50J  Ä?*Bval_51J ºæLZ»
+obs_0
+
+s21
+Ñ"=
+/pkg.torch.export.graph_signature.InputSpec.kind
+USER_INPUT"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"-
+!pkg.torch.onnx.original_node_nameinputs_0Z«
+obs_1
+
+s21
+	"=
+/pkg.torch.export.graph_signature.InputSpec.kind
+USER_INPUT"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"-
+!pkg.torch.onnx.original_node_nameinputs_1ZÀ
+action_masks
+
+s21
+"=
+/pkg.torch.export.graph_signature.InputSpec.kind
+USER_INPUT"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"*
+!pkg.torch.onnx.original_node_namemasksZ“
+recurrent_in
+
+s30
+
+ "=
+/pkg.torch.export.graph_signature.InputSpec.kind
+USER_INPUT"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"-
+!pkg.torch.onnx.original_node_namememoriesbè
+version_number
+
+
+"<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"?
+0pkg.torch.export.graph_signature.OutputSpec.kindUSER_OUTPUT"3
+!pkg.torch.onnx.original_node_nameversion_numberbê
+memory_size
+
+
+"<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"?
+0pkg.torch.export.graph_signature.OutputSpec.kindUSER_OUTPUT"7
+!pkg.torch.onnx.original_node_namememory_size_vectorbè
+discrete_actions
+
+
+"?
+0pkg.torch.export.graph_signature.OutputSpec.kindUSER_OUTPUT"*
+!pkg.torch.onnx.original_node_namecat_1b´
+discrete_action_output_shape
+
+
+"<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"?
+0pkg.torch.export.graph_signature.OutputSpec.kindUSER_OUTPUT"=
+!pkg.torch.onnx.original_node_namediscrete_act_size_vectorbù
+deterministic_discrete_actions
+
+
+"?
+0pkg.torch.export.graph_signature.OutputSpec.kindUSER_OUTPUT"*
+!pkg.torch.onnx.original_node_namecat_3jè
+version_number
+
+
+"<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"?
+0pkg.torch.export.graph_signature.OutputSpec.kindUSER_OUTPUT"3
+!pkg.torch.onnx.original_node_nameversion_numberjç
+,network_body._body_endoder.seq_layers.0.bias
+	
+Ä"<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"S
+!pkg.torch.onnx.original_node_name.p_network_body__body_endoder_seq_layers_0_biasjç
+,network_body._body_endoder.seq_layers.2.bias
+	
+Ä"<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"S
+!pkg.torch.onnx.original_node_name.p_network_body__body_endoder_seq_layers_2_biasjç
+,network_body._body_endoder.seq_layers.4.bias
+	
+Ä"<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"S
+!pkg.torch.onnx.original_node_name.p_network_body__body_endoder_seq_layers_4_biasj£
+5action_model._discrete_distribution.branches.0.weight
+	
+
+Ä"<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"\
+!pkg.torch.onnx.original_node_name7p_action_model__discrete_distribution_branches_0_weightjö
+3action_model._discrete_distribution.branches.0.bias
+
+
+"<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"Z
+!pkg.torch.onnx.original_node_name5p_action_model__discrete_distribution_branches_0_biasjö
+3action_model._discrete_distribution.branches.1.bias
+
+
+"<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"Z
+!pkg.torch.onnx.original_node_name5p_action_model__discrete_distribution_branches_1_biasjî
+1network_body.processors.0.normalizer.running_mean
+	
+Ñ"9
+/pkg.torch.export.graph_signature.InputSpec.kindBUFFER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentTrue"X
+!pkg.torch.onnx.original_node_name3b_network_body_processors_0_normalizer_running_meanjì
+1network_body.processors.1.normalizer.running_mean
+
+
+	"9
+/pkg.torch.export.graph_signature.InputSpec.kindBUFFER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentTrue"X
+!pkg.torch.onnx.original_node_name3b_network_body_processors_1_normalizer_running_meanjê
+memory_size
+
+
+"<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"?
+0pkg.torch.export.graph_signature.OutputSpec.kindUSER_OUTPUT"7
+!pkg.torch.onnx.original_node_namememory_size_vectorj´
+discrete_action_output_shape
+
+
+"<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"?
+0pkg.torch.export.graph_signature.OutputSpec.kindUSER_OUTPUT"=
+!pkg.torch.onnx.original_node_namediscrete_act_size_vectorjñ
+.network_body._body_endoder.seq_layers.0.weight
+
+
+Ä
+ç"<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"U
+!pkg.torch.onnx.original_node_name0p_network_body__body_endoder_seq_layers_0_weightjñ
+.network_body._body_endoder.seq_layers.2.weight
+
+
+Ä
+Ä"<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"U
+!pkg.torch.onnx.original_node_name0p_network_body__body_endoder_seq_layers_2_weightjñ
+.network_body._body_endoder.seq_layers.4.weight
+
+
+Ä
+Ä"<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"U
+!pkg.torch.onnx.original_node_name0p_network_body__body_endoder_seq_layers_4_weightj£
+5action_model._discrete_distribution.branches.1.weight
+	
+
+Ä"<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"\
+!pkg.torch.onnx.original_node_name7p_action_model__discrete_distribution_branches_1_weightj
+	div_1_min
+ j
+	div_1_max
+ j€
+sqrt
+	
+Ñ"≈
+$pkg.onnxscript.optimizer.folded_fromú['convert_element_type_default', 'div', 'network_body.processors.0.normalizer.normalization_steps', 'network_body.processors.0.normalizer.running_variance']j‡
+sqrt_1
+
+
+	"…
+$pkg.onnxscript.optimizer.folded_from†['convert_element_type_default_1', 'div_2', 'network_body.processors.1.normalizer.normalization_steps', 'network_body.processors.1.normalizer.running_variance']j[
+val_18
+
+
+"E
+$pkg.onnxscript.optimizer.folded_from['val_16', 'val_17', 'val_4']j\
+val_22
+
+
+"F
+$pkg.onnxscript.optimizer.folded_from['val_19', 'val_20', 'val_21']j\
+val_26
+
+
+"F
+$pkg.onnxscript.optimizer.folded_from['val_23', 'val_24', 'val_25']j\
+val_44
+
+
+"F
+$pkg.onnxscript.optimizer.folded_from['val_41', 'val_42', 'val_43']j
+val_49
+ j
+val_50
+ j
+val_51
+ j
+sub
+
+s21
+Ñj
+div_1
+
+s21
+Ñj
+clamp
+
+s21
+Ñj
+sub_4
+
+s21
+	j
+div_3
+
+
+	j
+clamp_1
+
+
+	j
+cat
+	
+
+çj
+linear
+	
+
+Äj
+sigmoid
+	
+
+Äj
+mul_14
+	
+
+Äj
+linear_1
+	
+
+Äj
+	sigmoid_1
+	
+
+Äj
+mul_21
+	
+
+Äj
+linear_2
+	
+
+Äj
+	sigmoid_2
+	
+
+Äj
+mul_28
+	
+
+Äj
+slice_2
+
+s21
+j
+slice_4
+
+s21
+j
+linear_3
+
+
+j
+mul_41
+
+s21
+j
+add_60
+
+
+j
+mul_44
+
+s21
+j
+mul_47
+
+
+j
+sub_23
+
+
+j
+softmax
+
+
+j
+linear_4
+
+
+j
+mul_50
+
+s21
+j
+add_70
+
+s21
+j
+mul_55
+
+s21
+j
+mul_58
+
+s21
+j
+sub_29
+
+s21
+j
+	softmax_1
+
+s21
+j
+val_52
+
+
+j
+multinomial
+
+
+j
+val_53
+
+s21
+j"
+multinomial_1
+
+s21
+j
+argmax
+
+
+j
+argmax_1
+
+s21
+Çë
+0pkg.torch.export.ExportedProgram.graph_signature‹
+# inputs
+p_version_number: PARAMETER target='version_number'
+p_is_continuous_int_deprecated: PARAMETER target='is_continuous_int_deprecated'
+p_continuous_act_size_vector: PARAMETER target='continuous_act_size_vector'
+p_discrete_act_size_vector: PARAMETER target='discrete_act_size_vector'
+p_act_size_vector_deprecated: PARAMETER target='act_size_vector_deprecated'
+p_memory_size_vector: PARAMETER target='memory_size_vector'
+p_network_body__body_endoder_seq_layers_0_weight: PARAMETER target='network_body._body_endoder.seq_layers.0.weight'
+p_network_body__body_endoder_seq_layers_0_bias: PARAMETER target='network_body._body_endoder.seq_layers.0.bias'
+p_network_body__body_endoder_seq_layers_2_weight: PARAMETER target='network_body._body_endoder.seq_layers.2.weight'
+p_network_body__body_endoder_seq_layers_2_bias: PARAMETER target='network_body._body_endoder.seq_layers.2.bias'
+p_network_body__body_endoder_seq_layers_4_weight: PARAMETER target='network_body._body_endoder.seq_layers.4.weight'
+p_network_body__body_endoder_seq_layers_4_bias: PARAMETER target='network_body._body_endoder.seq_layers.4.bias'
+p_action_model__discrete_distribution_branches_0_weight: PARAMETER target='action_model._discrete_distribution.branches.0.weight'
+p_action_model__discrete_distribution_branches_0_bias: PARAMETER target='action_model._discrete_distribution.branches.0.bias'
+p_action_model__discrete_distribution_branches_1_weight: PARAMETER target='action_model._discrete_distribution.branches.1.weight'
+p_action_model__discrete_distribution_branches_1_bias: PARAMETER target='action_model._discrete_distribution.branches.1.bias'
+b_network_body_observation_encoder_processors_0_normalizer_normalization_steps: BUFFER target='network_body.observation_encoder.processors.0.normalizer.normalization_steps' persistent=True
+b_network_body_observation_encoder_processors_0_normalizer_running_mean: BUFFER target='network_body.observation_encoder.processors.0.normalizer.running_mean' persistent=True
+b_network_body_observation_encoder_processors_0_normalizer_running_variance: BUFFER target='network_body.observation_encoder.processors.0.normalizer.running_variance' persistent=True
+b_network_body_observation_encoder_processors_1_normalizer_normalization_steps: BUFFER target='network_body.observation_encoder.processors.1.normalizer.normalization_steps' persistent=True
+b_network_body_observation_encoder_processors_1_normalizer_running_mean: BUFFER target='network_body.observation_encoder.processors.1.normalizer.running_mean' persistent=True
+b_network_body_observation_encoder_processors_1_normalizer_running_variance: BUFFER target='network_body.observation_encoder.processors.1.normalizer.running_variance' persistent=True
+b_network_body_processors_0_normalizer_normalization_steps: BUFFER target='network_body.processors.0.normalizer.normalization_steps' persistent=True
+b_network_body_processors_0_normalizer_running_mean: BUFFER target='network_body.processors.0.normalizer.running_mean' persistent=True
+b_network_body_processors_0_normalizer_running_variance: BUFFER target='network_body.processors.0.normalizer.running_variance' persistent=True
+b_network_body_processors_1_normalizer_normalization_steps: BUFFER target='network_body.processors.1.normalizer.normalization_steps' persistent=True
+b_network_body_processors_1_normalizer_running_mean: BUFFER target='network_body.processors.1.normalizer.running_mean' persistent=True
+b_network_body_processors_1_normalizer_running_variance: BUFFER target='network_body.processors.1.normalizer.running_variance' persistent=True
+inputs_0: USER_INPUT
+inputs_1: USER_INPUT
+masks: USER_INPUT
+memories: USER_INPUT
+
+# outputs
+p_version_number: USER_OUTPUT
+p_memory_size_vector: USER_OUTPUT
+cat_1: USER_OUTPUT
+p_discrete_act_size_vector: USER_OUTPUT
+cat_3: USER_OUTPUT
+Ç^
+2pkg.torch.export.ExportedProgram.range_constraints({s21: VR[0, int_oo], s30: VR[0, int_oo]}B
+ 
